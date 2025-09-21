@@ -71,7 +71,7 @@ Here's a list of the column types you can use:
 
 `boolean` - for true/false values
 
-In addition to these types, any valid postgresql type can be used. If the type includes whitespace, be sure to surround it with quotation marks. For example, the [`oca_appearances.appearancedatetime` column](nycduckdb/datasets/oca.yml) has type `'timestamp without time zone'`
+In addition to these types, any valid postgresql type can be used. If the type includes whitespace, be sure to surround it with quotation marks. For example, the [`oca_appearances.appearancedatetime` column](nycdb/datasets/oca.yml) has type `'timestamp without time zone'`
 
 **************
 
@@ -84,10 +84,10 @@ It's also **essential** to note that nycdb converts all column names found in th
 
 Some examples of how column names are transformed:
 
-- Characters like ` `, `_`, `-`, and `+`, among others, are removed from the column names found in the CSV. For example, the `VIOLATION_NUMBER` column from the [DOB Violations data source](https://data.cityofnewyork.us/Housing-Development/DOB-Violations/3h2n-5cm9) is renamed to [`ViolationNumber` in dob_violations.yml](nycduckdb/datasets/dob_violations.yml).
-- The charater `%` is replaced with `pct`. For example, the `% TRANSFERRED` column from the [ACRIS - Real Property Master data source](https://data.cityofnewyork.us/City-Government/ACRIS-Real-Property-Master/bnx9-e6tj) is renamed to [`PCTTRANSFERRED` in acris.yml](nycduckdb/datasets/acris.yml).
-- Columns that begin with a number in the CSV are rearranged so the number comes last. For example, the `1-BR Units` column from the [Affordable Housing Production by Building data source](https://data.cityofnewyork.us/Housing-Development/Affordable-Housing-Production-by-Building/hg8x-zxpr) is renamed to [`BRUnits1` in hpd_affordable_production.yml](nycduckdb/datasets/hpd_affordable_production.yml).
-- All these transformations are implemented in [transform.py](nycduckdb/transform.py).
+- Characters like ` `, `_`, `-`, and `+`, among others, are removed from the column names found in the CSV. For example, the `VIOLATION_NUMBER` column from the [DOB Violations data source](https://data.cityofnewyork.us/Housing-Development/DOB-Violations/3h2n-5cm9) is renamed to [`ViolationNumber` in dob_violations.yml](nycdb/datasets/dob_violations.yml).
+- The charater `%` is replaced with `pct`. For example, the `% TRANSFERRED` column from the [ACRIS - Real Property Master data source](https://data.cityofnewyork.us/City-Government/ACRIS-Real-Property-Master/bnx9-e6tj) is renamed to [`PCTTRANSFERRED` in acris.yml](nycdb/datasets/acris.yml).
+- Columns that begin with a number in the CSV are rearranged so the number comes last. For example, the `1-BR Units` column from the [Affordable Housing Production by Building data source](https://data.cityofnewyork.us/Housing-Development/Affordable-Housing-Production-by-Building/hg8x-zxpr) is renamed to [`BRUnits1` in hpd_affordable_production.yml](nycdb/datasets/hpd_affordable_production.yml).
+- All these transformations are implemented in [transform.py](nycdb/transform.py).
 
 For this example, we'll fill out the rest of the `ecb_violations.yml` configuration.
 

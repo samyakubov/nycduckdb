@@ -7,7 +7,6 @@ import csv
 import tempfile
 from typing import Generator
 from tqdm import tqdm
-
 from . import dataset_transformations
 from . import sql
 from .database import Database

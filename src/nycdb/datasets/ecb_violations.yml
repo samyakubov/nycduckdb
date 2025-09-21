@@ -3,8 +3,6 @@ files:
   -
     url: https://data.cityofnewyork.us/api/views/6bgk-3dad/rows.csv?accessType=DOWNLOAD
     dest: ecb_violations.csv
-sql:
-  - ecb_violations.sql
 schema:
   table_name: ecb_violations
   verify_count: 1_300_000

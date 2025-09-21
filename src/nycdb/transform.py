@@ -3,7 +3,6 @@ import io
 import re
 import types
 from zipfile import ZipFile
-
 from .address import normalize_street, normalize_street_number, normalize_apartment
 from .bbl import bbl
 from .utility import merge
@@ -123,9 +122,8 @@ def skip_fields(table, fields_to_skip):
         yield row
 
 
-##
+
 # standardize addresses in hpd contact and registration:
-#
 
 def hpd_registrations_address_cleanup(rows):
     for row in rows:
