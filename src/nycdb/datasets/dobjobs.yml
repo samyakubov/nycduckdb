@@ -112,7 +112,6 @@ schema:
       GISNTANAME: text
       GISBIN: char(7)
       bbl: char(10)
-      id: 'INTEGER PRIMARY KEY AUTOINCREMENT'
   -
     table_name: dob_now_jobs
     verify_count: 380_000

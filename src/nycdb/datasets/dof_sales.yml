@@ -3,8 +3,6 @@ files:
   -
     url: https://data.cityofnewyork.us/api/views/usep-8jbt/rows.csv?accessType=DOWNLOAD
     dest: dof_sales.csv
-sql:
-  - dof_sales.sql
 schema:
   table_name: dof_sales
   verify_count: 60_000
@@ -31,4 +29,3 @@ schema:
     SalePrice: bigint
     SaleDate: date
     bbl: char(10)
-    id: 'INTEGER PRIMARY KEY AUTOINCREMENT'
