@@ -2,7 +2,7 @@
 
 Based on [NYCDB](https://github.com/nycdb/nycdb)
 
-**nycduckdb** is a python program that downloads, processes, and loads the following public datasets into postgres:
+**nycduckdb** is a python program that downloads, processes, and loads the following public datasets into DuckDb:
 
 - [DOB Job Filings](https://github.com/nycdb/nycdb/wiki/Dataset:-DOB-Job-Filings)
 - [DOB Complaints](https://github.com/nycdb/nycdb/wiki/Dataset:-DOB-Complaints)
