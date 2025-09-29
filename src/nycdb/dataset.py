@@ -263,7 +263,7 @@ class Dataset:
             + tables
             + [file_arg]
         )
-        subprocess.run(cmd, env=self.pg_env(), check=True)
+        subprocess.run(cmd, check=True)
 
     def drop(self):
         """
@@ -273,20 +273,3 @@ class Dataset:
 
         for s in self.schemas:
             self.db.sql(sql.drop_table(s["table_name"]))
-
-    def pg_env(self):
-        """
-        Returns a copy of the environment with postgres environment variables set
-        to be the same as the values provided by the args, which are typically given
-        on the command line.
-        """
-        return merge(
-            os.environ.copy(),
-            {
-                "PGHOST": self.args.host,
-                "PGPORT": self.args.port,
-                "PGUSER": self.args.user,
-                "PGDATABASE": self.args.database,
-                "PGPASSWORD": self.args.password,
-            },
-        )

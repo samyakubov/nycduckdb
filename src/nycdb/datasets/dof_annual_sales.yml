@@ -297,4 +297,3 @@ schema:
     sale_date: date
     year: smallint
     bbl: char(10)
-    id: 'INTEGER PRIMARY KEY AUTOINCREMENT'
